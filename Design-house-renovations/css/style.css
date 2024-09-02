@@ -1,0 +1,1013 @@
+@charset "utf-8";
+
+html {
+  scroll-padding-top: 40px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Noto Serif JP';
+  color: #333;
+}
+
+header div {
+  width: 96%;
+  margin: 0 auto;
+}
+
+header img {
+  margin: 16px 0 16px;
+}
+
+/* nav */
+header nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.menu_btn {
+  display: none;
+}
+
+.menu_icon {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  height: 12px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.navicon {
+  display: block;
+  width: 31px;
+  height: 2px;
+  background: #b71b26;
+  position: relative;
+}
+
+.navicon::before,
+.navicon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #b71b26;
+  position: absolute;
+  transition: all .4s ease-out;
+}
+
+.navicon::before {
+  top: 10px
+}
+
+.navicon::after {
+  top: -10px;
+}
+
+header nav .menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.6s;
+}
+
+header nav ul li:first-of-type {
+  padding-top: 80px
+}
+
+header nav ul li:last-of-type {
+  padding-bottom: 180px;
+}
+
+header nav .menu a {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  font-family: 'noto serif JP';
+  padding: 24px 20px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.menu_btn:checked~.menu {
+  max-height: 532px;
+  transition: max-height 0.6s;
+}
+
+.menu_btn:checked~.menu_icon .navicon {
+  background: transparent;
+}
+
+.menu_btn:checked~.menu_icon .navicon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.menu_btn:checked~.menu_icon .navicon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+main {
+  margin: 0 auto;
+  text-align: center;
+}
+
+main h1 .hero_sp {
+  display: block;
+}
+
+main h1 .hero_pc {
+  display: none;
+}
+
+main h1 img {
+  max-width: 100%;
+  margin-bottom: 48px;
+}
+
+.concept_sec,
+.qa_sec {
+  margin: 0 12px 80px;
+}
+
+.service_sec {
+  margin: 0 12px 80px;
+}
+
+.flow_sec {
+  background: #f4f5f7;
+  margin: 0 0 72px;
+}
+
+.contact_sec {
+  background: #dee2e9;
+  margin: 0 0 80px;
+}
+
+.title {
+  font-family: 'Noto serif JP';
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+  line-height: 1em;
+}
+
+.subtitle_blue {
+  font-family: 'noto serif JP';
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  color: #223E69;
+  position: relative;
+}
+
+.subtitle_red {
+  font-family: 'noto serif JP';
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  color: #b71b26;
+}
+
+.subtitle_blue::before {
+  content: "";
+  border-style: solid;
+  border-width: 1px 60px 0px 01px;
+  border-color: #223E69;
+  position: absolute;
+  margin-top: 6px;
+  margin-left: -70px;
+}
+
+.subtitle_blue::after {
+  content: "";
+  border-style: solid;
+  border-width: 1px 60px 0px 01px;
+  border-color: #223E69;
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 7px;
+}
+
+.subtitle_red::before {
+  content: "";
+  border-style: solid;
+  border-width: 1px 60px 0px 01px;
+  border-color: #b71b26;
+  position: absolute;
+  margin-top: 6px;
+  margin-left: -70px;
+}
+
+.subtitle_red::after {
+  content: "";
+  border-style: solid;
+  border-width: 1px 60px 0px 01px;
+  border-color: #b71b26;
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 7px;
+}
+
+/* Concept Sec */
+
+.concept_sec h3 {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  line-height: 1em;
+}
+
+.concept_sec .lead {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 2;
+  text-align: left;
+}
+
+/* Service Sec */
+
+.service_sec ul {
+  margin-bottom: 40px;
+}
+
+.service_sec ul li {
+  margin-bottom: 40px;
+}
+
+.service_sec img {
+  max-width: 100%;
+}
+
+.service_sec h4 {
+  font-family: 'noto serif JP';
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin: 8px auto;
+  line-height: 1em;
+}
+
+.service_sec .discribe {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.service_sec .more_btn {
+  display: flex;
+  justify-content: end;
+}
+
+.service_sec .more_btn a {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  position: relative;
+  padding: 0px 15px 2px 5px;
+}
+
+.service_sec .more_btn a::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #333;
+  position: absolute;
+  pointer-events: none;
+  margin-top: 5px;
+  margin-left: 5px
+}
+
+/* Flow sec */
+
+.flow_sec {
+  padding: 16px 0;
+}
+
+.flow_sec ul {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flow_sec ul li:nth-child(odd) {
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  padding: 8px 0;
+  border-radius: 32px;
+}
+
+.flow_sec .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 16px 0px 16px;
+  margin: 8px 0;
+}
+
+.flow_sec .arrow:nth-child(2) {
+  border-color: rgba(183, 27, 38, 0.6) transparent transparent transparent;
+}
+
+.flow_sec .arrow:nth-child(4) {
+  border-color: rgba(183, 27, 38, 0.7) transparent transparent transparent;
+}
+
+.flow_sec .arrow:nth-child(6) {
+  border-color: rgba(183, 27, 38, 0.8) transparent transparent transparent;
+}
+
+.flow_sec .arrow:nth-child(8) {
+  border-color: rgba(183, 27, 38, 0.9) transparent transparent transparent;
+}
+
+.flow_sec .arrow:nth-child(10) {
+  border-color: rgba(183, 27, 38) transparent transparent transparent;
+}
+
+/* Q&A  Sec*/
+
+.qa_sec .question {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.qa_sec .answer {
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.qa_sec .qa_cont .sentence {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  width: 90%;
+  padding-top: 9px;
+}
+
+.qa_sec .qa_cont .q_icon {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'noto serif JP';
+  background: #333;
+  width: 36px;
+  height: 36px;
+  border-radius: 52px;
+  padding-top: 6px;
+  margin: 0 8px 0 0px;
+}
+
+.qa_sec .qa_cont .a_icon {
+  background: #b71b26;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'noto serif JP';
+  border-radius: 52px;
+  margin: 0 8px 0 0px;
+  flex-basis: 36px;
+  height: 36px;
+  padding-top: 6px;
+}
+
+
+
+/* Contact Sec */
+
+.contact_sec {
+  padding: 16px 0 24px;
+}
+
+.contact_sec form {
+  margin: 0 12px;
+}
+
+.hissu,
+.non_hissu {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+  word-break: keep-all;
+}
+
+.contact_sec form .hissu::after {
+  content: "必須";
+  background: #b71b26;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 4px 9px;
+  border-radius: 8px;
+  margin-left: 8px;
+  position: absolute;
+}
+
+.chose {
+  margin: 16px 0 24px 0;
+}
+
+.contact_sec .chose .siryou {
+  margin-right: 40px;
+}
+
+.nyuuryoku {
+  margin-bottom: 24px;
+}
+
+.contact_sec input[type="radio"] {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  margin-right: 4px;
+  border: none;
+}
+
+.contact_sec input[type="radio"]::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #FFF;
+  border-radius: 50px;
+}
+
+.contact_sec input[type="radio"]:checked:before {
+  background: #5c5c5c;
+  border: 3px solid #fff;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  background-color: #fff;
+  height: 32px;
+  width: 100%;
+  text-align: left;
+  padding: 0 8px;
+}
+
+.contact_sec .nyuuryoku label {
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  align-items: baseline;
+}
+
+.contact_sec .nyuuryoku label input {
+  width: 125px;
+  margin: 0 0 8px 4px;
+}
+
+.contact_sec textarea {
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 24px;
+  text-align: left;
+  padding: 10px 8px;
+}
+
+.contact_sec input[type="submit"] {
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'noto serif JP';
+  letter-spacing: 0.1em;
+  text-align: left;
+  width: 200px;
+  padding: 16px 0px 16px 16px;
+  position: relative;
+}
+
+.contact_sec .submit_btn::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #fff;
+  margin-top: 19px;
+  margin-left: -22px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.contact_sec .address label {
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  align-items: baseline;
+}
+
+.contact_sec .address label input {
+  width: 125px;
+  margin: 0 0 8px 4px;
+}
+
+/* フッター領域 */
+footer {
+  width: 100%;
+  height: 91px;
+}
+
+footer .top_btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer a {
+  display: flex;
+  background: #333;
+  width: 46px;
+  height: 46px;
+  margin-right: 12px;
+}
+
+footer a::after {
+  content: "";
+  display: inline;
+  width: 23px;
+  height: 23px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #fff;
+  transform: rotate(45deg);
+  margin: 15px auto;
+}
+
+footer .company {
+  background: #333;
+  height: 45px;
+  color: #fff;
+  font-family: 'noto serif JP';
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  align-items: center;
+  padding-top: 16px;
+}
+
+
+@media screen and (min-width:768px) {
+
+  html {
+    scroll-padding-top: 129px;
+  }
+
+  header {
+    height: 81px;
+    position: fixed;
+    background-color: #ffffffea;
+    width: 100%;
+    z-index: 99;
+  }
+
+  header div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  header img {
+    width: 30vw;
+    height: 33px;
+    margin: 24px 0 24px 24px;
+  }
+
+  /* PC nav */
+  header nav input,
+  .menu_icon {
+    display: none;
+  }
+
+  header nav {
+    position: static;
+    width: 55%;
+    margin-right: 24px;
+  }
+
+  header nav .menu {
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav .menu a {
+    display: block;
+    font-size: clamp(10px, 1.2vw, 16px);
+    padding: 8px 0;
+    margin: 24px 0;
+  }
+
+  header nav ul li:first-of-type {
+    padding-top: 0px;
+  }
+
+  header nav ul li:last-of-type {
+    padding-bottom: 0px;
+  }
+
+  header nav .menu a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    text-underline-offset: 6px;
+    transition: all 300ms ease;
+  }
+
+  /* PC main */
+
+  main {
+    padding-top: 81px;
+  }
+
+  main h1 .hero_sp {
+    display: none;
+  }
+
+  main h1 .hero_pc {
+    display: block;
+    width: 100%;
+  }
+
+  .concept_sec,
+  .service_sec {
+    width: 78%;
+    margin: 160px auto 0;
+  }
+
+  .qa_sec {
+    width: 80%;
+    margin: 160px auto 0;
+  }
+
+  .flow_sec {
+    margin: 160px auto 0;
+  }
+
+  .contact_sec {
+    margin: 160px auto;
+  }
+
+  .title {
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+
+  .subtitle_blue,
+  .subtitle_red {
+    font-size: 16px;
+    margin-bottom: 48px;
+  }
+
+  .subtitle_blue::before,
+  .subtitle_red::before {
+    margin-top: 8px;
+  }
+
+  .subtitle_blue::after,
+  .subtitle_red::after {
+    margin-top: 8px;
+  }
+
+  /* PCのConcept Sec */
+
+  .concept_sec h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .concept_sec .lead {
+    font-size: 16px;
+  }
+
+  /* PCのserviceSec */
+
+  .service_sec ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .service_sec ul li {
+    width: 30%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service_sec h4 {
+    font-size: 24px;
+    margin: 16px 0;
+  }
+
+  .service_sec .discribe {
+    font-size: 16px;
+  }
+
+  .service_sec .more_btn {
+    margin-top: auto;
+  }
+
+  .service_sec .more_btn::after {
+    margin-top: 9px;
+  }
+
+  .service_sec .more_btn a:hover {
+    transform: scale(1.1);
+    transition: all 300ms ease;
+    text-shadow: 0px 0px 5px #d8515a44;
+    color: #b71b26;
+  }
+
+  .service_sec .more_btn a:hover::after {
+    border-color: transparent transparent transparent #b71b26;
+  }
+
+  /* PCのflowSec */
+
+  .flow_sec {
+    padding: 48px 0;
+  }
+
+  .flow_sec ul {
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+  .flow_sec ul li {
+    writing-mode: vertical-lr;
+  }
+
+
+  .flow_sec ul li:nth-child(odd) {
+    padding: 0 16px;
+    width: 60px;
+    height: 280px;
+    font-size: 28px;
+    line-height: 1em;
+  }
+
+  .flow_sec .arrow {
+    border-width: 30px 0px 30px 30px;
+    margin: 0 auto;
+  }
+
+  .flow_sec .arrow:nth-child(2) {
+    border-color: transparent transparent transparent rgba(183, 27, 38, 0.6);
+  }
+
+  .flow_sec .arrow:nth-child(4) {
+    border-color: transparent transparent transparent rgba(183, 27, 38, 0.7);
+  }
+
+  .flow_sec .arrow:nth-child(6) {
+    border-color: transparent transparent transparent rgba(183, 27, 38, 0.8);
+  }
+
+  .flow_sec .arrow:nth-child(8) {
+    border-color: transparent transparent transparent rgba(183, 27, 38, 0.9);
+  }
+
+  .flow_sec .arrow:nth-child(10) {
+    border-color: transparent transparent transparent rgba(183, 27, 38);
+  }
+
+  /* PCのQ&A  Sec*/
+
+  .qa_sec .qa_cont {
+    margin-bottom: 160px;
+  }
+
+  .qa_sec .answer {
+    margin-bottom: 48px;
+  }
+
+  .qa_sec .qa_cont .sentence {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+
+  .qa_sec .qa_cont .q_icon,
+  .qa_sec .qa_cont .a_icon {
+    font-size: 34px;
+    flex-basis: 50px;
+    height: 52px;
+    margin: 0 8px 0 0;
+  }
+
+  /*PC のContact Sec  */
+
+  .contact_sec {
+    padding: 48px 0;
+  }
+
+  .contact_sec form {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 48px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contact_sec .hissu {
+    width: 35%;
+    font-size: clamp(15px, 2vw, 20px);
+    margin-bottom: 0px;
+    text-align: right;
+    padding-right: 73px;
+    position: relative;
+
+  }
+
+  .contact_sec .non_hissu {
+    width: 35%;
+    font-size: clamp(15px, 2vw, 20px);
+    margin-bottom: 0px;
+    text-align: right;
+    padding-right: 12px;
+  }
+
+  .contact_sec form .hissu::after {
+    content: "必須";
+    font-size: 13px;
+    padding: 3px 10px 4px;
+  }
+
+  .contact_sec input[type="radio"] {
+    vertical-align: baseline;
+  }
+
+  .contact_sec .chose {
+    width: 65%;
+    margin-bottom: 52px;
+    margin-top: 0;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .nyuuryoku {
+    width: 65%;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .contact_sec .siryou:hover {
+    color: #652dff;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px#b5a1fff8;
+  }
+
+  .contact_sec .soudan:hover {
+    color: #652dff;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px#b5a1fff8;
+  }
+
+  .contact_sec .nyuuryoku {
+    width: 65%;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .contact_sec input[name="customer_name"],
+  input[name="customer_tel"] {
+    height: 52px;
+    width: 52%;
+  }
+
+  .contact_sec input[name="customer_mail"],
+  input[name="customer_address"] {
+    height: 52px;
+    width: 98%;
+  }
+
+  .contact_sec .nyuuryoku label {
+    font-size: 20px;
+    align-items: flex-start;
+  }
+
+  .contact_sec .nyuuryoku label input {
+    height: 52px;
+    width: 222px;
+    margin: 0 0 24px 4px;
+  }
+
+  .contact_sec textarea {
+    height: 208px;
+    width: 98%;
+    margin-bottom: 24px;
+  }
+
+  .contact_sec .submit_btn {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .contact_sec input[type="submit"] {
+    width: 200px;
+    padding: 16px 0px 16px 16px;
+    font-size: 20px;
+    width: 300px;
+    padding: 24px 0px 23px 43px;
+  }
+
+  .contact_sec .submit_btn::after {
+    border-width: 9px 0 9px 9px;
+    margin-top: 28px;
+    margin-left: -50px;
+  }
+
+  .contact_sec input[type="submit"]:hover {
+    background: #6d6d6d;
+    box-shadow: 2px 2px 5px #333 inset;
+  }
+
+  .contact_sec .submit_btn:hover {
+    transform: translate(2px, 2px);
+    transition: all 80ms linear;
+  }
+
+
+  /* PCフッター領域 */
+  footer {
+    width: 100%;
+    height: 121px;
+  }
+
+  footer a {
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
+  }
+
+  footer a::after {
+    content: "";
+    display: inline;
+    width: 30px;
+    height: 30px;
+    margin: 22px auto;
+  }
+
+  footer a:hover {
+    box-shadow: 0px 0px 8px #ffffff inset;
+    transition: all 300ms ease;
+  }
+
+  footer .company {
+    height: 62px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 24px 0 23px;
+  }
+
+}
+
+/* 固定幅 */
+@media screen and (min-width:1140px) {
+
+  header img {
+    width: 342px;
+  }
+
+  main h1 img {
+    width: 100%;
+  }
+
+  main .concept_sec,
+  .service_sec,
+  .qa_sec {
+    max-width: 1140px;
+  }
+
+  main .flow_sec,
+  .contact_sec {
+    width: 100%;
+  }
+
+  .flow_sec ul {
+    max-width: 915px;
+  }
+
+  .contact_sec form {
+    max-width: 1020px;
+  }
+}
