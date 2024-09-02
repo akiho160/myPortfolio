@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'catamaran', 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+form {
+  margin: 0 auto;
+}
+
+main p {
+  margin-bottom: 0px;
+}
+
+.formSec {
+  border: 2px solid rgba(182, 234, 255, 0.644);
+  border-bottom: none;
+}
+
+.form,
+.option {
+  border-bottom: 2px solid rgba(182, 234, 255, 0.644);
+  background: rgb(236, 247, 252);
+  padding: 8px;
+  margin-top: 0;
+}
+
+.form::before {
+  content: "必須";
+  color: #fff;
+  background: rgb(255, 6, 110);
+  font-size: 8px;
+  padding: 1px 2px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.option::before {
+  content: "任意";
+  color: #fff;
+  background-color: #ccc;
+  font-size: 8px;
+  padding: 1px 2px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.input_form {
+  border-bottom: 2px solid rgba(182, 234, 255, 0.644);
+  margin-top: 0;
+}
+
+select,
+input[type="text"] {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 #ccc inset;
+  width: 95%;
+  padding: 8px 5px;
+  margin: 8px auto;
+}
+
+textarea {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 #ccc inset;
+  width: 95%;
+  height: 120px;
+  margin: 8px auto;
+  padding: 8px 5px;
+}
+
+input[type="submit"] {
+  padding: 5px 50px;
+  background: rgb(255, 6, 110);
+  border: none;
+  box-shadow: 2px 2px 3px #bbbbbb;
+  border-radius: 3px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.submit {
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (min-width:640px) {
+  .formSec {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form,
+  .option {
+    flex-basis: 40%;
+  }
+
+  .input_form {
+    flex-basis: 60%;
+    border-left: 2px solid rgba(182, 234, 255, 0.644);
+  }
+
+  select,
+  input[type="text"] {
+    width: 70%;
+    margin: 8px;
+  }
+
+  input[type="submit"]:hover {
+    background: rgb(252, 153, 194);
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 3px #646464;
+  }
+}
+
+@media screen and (min-width:800px) {
+
+  main {
+    margin: 0 auto;
+  }
+
+  form {
+    width: 720px;
+  }
+}

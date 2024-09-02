@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>お問い合わせフォーム</title>
+</head>
+
+<body>
+  <header>
+    <h1>お問い合わせフォーム</h1>
+  </header>
+  <main>
+
+    <!--  枠ここから-->
+    <form action="" method="">
+      <p>
+        以下のフォームよりお問い合わせ内容をご入力下さい。
+      </p>
+      <div class="formSec">
+
+        <p class="form">お問い合わせ種別</p>
+        <p class="input_form">
+          <select name="user_select">
+            <option value="選択してください">選択してください</option>
+            <option value="A">A</option>
+            <option value="A">B</option>
+            <option value="A">C</option>
+          </select>
+        </p>
+
+        <p class="option">注文番号</p>
+        <p class="input_form">
+          <input type="text" name="order_number" placeholder="12桁の数字を入力してください">
+        </p>
+
+        <p class="form">お名前</p>
+        <p class="input_form">
+          <input type="text" name="user_name" placeholder="山田 花子">
+        </p>
+
+        <p class="form">メールアドレス</p>
+        <p class="input_form">
+          <input type="text" name="user_mail" placeholder="info@example.com">
+        </p>
+
+        <p class="form">メールアドレス（確認用）</p>
+        <p class="input_form">
+          <input type="text" name="user_mail2" placeholder="上記と同じメールアドレスを入力してください">
+        </p>
+
+        <p class="form">内容</p>
+        <p class="input_form">
+          <textarea name="contents" placeholder="お問い合わせ内容を入力してください"></textarea>
+        </p>
+      </div>
+      <!-- 枠ここまで -->
+
+      <p class="submit">
+        <input type="submit" value="確認">
+      </p>
+    </form>
+
+  </main>
+</body>
+
+</html>
