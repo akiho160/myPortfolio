@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+main {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.detail_menu {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.detail_img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.detail_submenu {
+    color: #7f5539;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.detail_explain {
+    color: #7f5539;
+    font-size: 16px;
+    font-weight: 400;
+    border-top: 1px solid #ede0d4;
+    border-bottom: 1px solid #ede0d4;
+    padding: 20px 0;
+    line-height: 1.6;
+}
+
+.detail_money {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0 24px;
+    color: #bf0007;
+}
+
+.detail_favorite {
+    padding-left: 12px;
+    vertical-align: top;
+}
+
+.detail_buy {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.detail_buy>div {
+    position: relative;
+    width: auto;
+}
+
+.detail_buy>div>span {
+    position: absolute;
+    bottom: 0;
+    margin-left: 4px;
+    font-size: 16px;
+}
+
+.detail_text {
+    border: 1px solid #7f5539;
+    width: 56px;
+    height: 36px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.cart_input {
+    margin-left: 32px;
+    background-color: #7f5539;
+    text-align: center;
+    color: #fff;
+    width: 160px;
+}
+
+/* pc版 */
+@media screen and (min-width: 768px) {
+    .detail_menu {
+        width: 76%;
+        max-width: 1046px;
+        margin: 80px auto 0;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .flex_item1 {
+        width: 52%;
+    }
+
+    .flex_item2 {
+        width: 48%;
+        margin-left: 4%;
+    }
+
+    .detail_img {
+        margin-bottom: 0px;
+    }
+
+    .detail_submenu {
+        font-size: clamp(1rem, 0.111rem + 1.85vw, 1.5rem);
+    }
+
+    .detail_explain {
+        font-size: clamp(1rem, 0.111rem + 1.85vw, 1.5rem);
+        padding: 40px 0;
+    }
+
+    .detail_money {
+        font-size: clamp(1rem, 0.111rem + 1.85vw, 1.5rem);
+        margin: 40px 0;
+    }
+
+    .detail_buy>div>span {
+        margin-left: 8px;
+        font-size: clamp(1rem, 0.111rem + 1.85vw, 1.5rem);
+    }
+
+    .detail_text {
+        max-width: 80px;
+        height: 52px;
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .cart_input {
+        font-size: clamp(0.75rem, -0.139rem + 1.85vw, 1.25rem);
+        margin-left: 52px;
+        width: 56%;
+    }
+
+}
