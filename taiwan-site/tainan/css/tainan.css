@@ -1,0 +1,543 @@
+@charset "utf-8";
+
+/* header領域↓ */
+header {
+    background-image: url(../image/tn-top.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 667px;
+    text-align: center;
+}
+
+.taipeiInfo {
+    width: 100%;
+    height: 615px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    width: 53%;
+    margin: 64px auto 0;
+}
+
+.headDes {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.6;
+    width: 65%;
+    text-align: justify;
+    position: absolute;
+    bottom: 72px;
+    right: 8px;
+}
+
+/*↓ main領域↓ */
+
+main {
+    width: 79%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+/* section1 */
+
+.attSec {
+    width: 100%;
+    margin-top: 40px;
+}
+
+h2 {
+    margin: 0 auto 40px;
+}
+
+.h3Att{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attImg {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.attSec p {
+    margin-bottom: 20px;
+    background-color: rgba(100, 201, 155, 20%);
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 20px 16px;
+    text-align: justify;
+}
+
+.att1SubFlex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.attSubPc{
+    display: none;
+}
+
+.attSub{
+    width: 47%;
+}
+
+.attLine{
+    border-bottom: 1px solid ;
+    width: 80%;
+    margin: 60px auto;
+}
+
+/* section2 */
+
+.grmSec{
+    padding-top: 40px;
+}
+
+.grmSubtitle,
+.hrSubtitle{
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 12px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    width: 80%;
+    margin: 0 auto 40px;
+}
+
+.h3Grm{
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.h3Ruby{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.grmImg{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.grmImg1,
+.grmImg3{
+    object-position: 50% 50%;
+}
+
+.grmImg2{
+    object-position: 50% 20%;
+}
+
+.grmImg4{
+    object-position: 50% 65%;
+}
+
+.grmDesr{
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+.contentRight{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.grmBtn{
+    border: 2px solid #eda184;
+    background: #fff;
+    font-size: 12px;
+    padding: 12px 38px 12px 24px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.grmBtn::after{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 15px;
+    right: 24px;
+    color: #eda184;
+    border-style: solid;
+    border-color: transparent;
+    border-left-color:currentColor;
+    border-right: 0;
+    border-width: 6px;
+}
+
+/* modal */
+.modalCont {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+.closeBlock {
+    width: 100%;
+    display: block;
+    text-align: right;
+}
+
+.modalClose {
+    display: inline;
+    width: 28px;
+    height: 28px;
+    background: none;
+    border: none;
+    position: relative;
+    margin: 8px 8px 0 0;
+}
+
+.modalClose::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 32px;
+    top: 10px;
+    right: -2px;
+    border-bottom: 7px solid #000;
+    transform: rotate(45deg);
+}
+
+.modalClose::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 32px;
+    top: 10px;
+    right: -2px;
+    border-bottom: 7px solid #000;
+    transform: rotate(-45deg);
+}
+
+.modalCont img {
+    width: 280px;
+    margin: 44px auto 0;
+    box-shadow: 7px 7px 4px #d9d9d9;
+}
+
+/* section3 */
+
+.hrSec{
+    padding: 20px 0 60px;
+}
+
+.h3Hr{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.hrImg{
+    width: 100%;
+    margin: 20px auto;
+}
+
+.hrDesr{
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media screen and (min-width:768px) {
+    header nav ul li:nth-of-type(4) {
+        pointer-events: none;
+    }
+
+    /* header領域↓ */
+header {
+    background-position: 50% 40%;
+    height: 668px;
+    text-align: left;
+}
+
+.taipeiInfo {
+    width: 100%;
+    max-width: 1283px;
+    height: 615px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    width: 53%;
+    margin: 124px auto 0;
+}
+
+.headDes {
+    font-size: 20px;
+    width: 40%;
+    bottom: 100px;
+    right: 20px;
+}
+
+    main {
+        width: 92%;
+        max-width: 1104px;
+    }
+
+    /*PCセクション１  */
+
+    .attSec {
+        margin-top: 120px;
+    }
+    
+    .attSec h2 {
+        margin: 0 -25px 80px;
+    }
+    
+    .h3Att{
+        font-size: 36px;
+        text-align: left;
+    }
+
+    .attFlex1{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .attImg {
+        width: 55%;
+    }
+    
+    .attSec p {
+        width: 42%;
+        margin: 28px 0 48px 40px;
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .attFlex2{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .att1SubFlex {
+        width: 55%;
+    }
+    
+    .attSub{
+        display: none;
+    }
+
+    .attSubPc{
+        display: block;
+        width: 48%;
+    }
+    
+    .attLine{
+        width: 50%;
+        margin: 120px auto;
+    }
+
+    /* PCセクション２ */
+
+    .grmSec{
+        padding-top: 120px;
+    }
+
+    .grmSec h2{
+        margin: 0 -25px 40px auto;
+    }
+    
+    .grmSec .grmSubtitle,
+    .grmSec .hrSubtitle{
+        font-size: 20px;
+        padding: 40px 0;
+        width: 40%;
+        margin: 0 20px 40px auto;
+    }
+
+    .grmFlex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .grmContents{
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+    }
+
+    .h3Flex{
+        display: flex;
+    }
+    
+    .h3Grm{
+        font-size: 36px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .h3Ruby{
+        align-self: flex-end;
+        text-align: left;
+        font-size: 24px;
+        margin-left: 12px;
+        margin-bottom: 20px;
+    }
+
+    .grmImg{
+        height: 220px;
+        margin-bottom: 20px;
+    }
+    
+    .grmDesr{
+        font-size: 20px;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+    
+    .grmBtn{
+        font-size: 20px;
+        padding: 21px 63px 22px 47px;
+        margin-bottom: 60px;
+        cursor: pointer;
+        z-index: 1;
+        display: block;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .grmBtn::after{
+        top: 28px;
+        right: 48px;
+        border-width: 9px;
+    }
+
+    .grmBtn::before {
+        content: "";
+        width: 120%;
+        height: 200%;
+        position: absolute;
+        top: -50%;
+        right: 0;
+        z-index: -1;
+        background: #eda184;
+        border-radius: 0 100% 100% 0;
+        transform: translateX(-100%);
+        transition: transform ease .6s;
+      }
+
+      .grmBtn:hover {
+        color: #fff;
+      }
+
+      .grmBtn:hover::after{
+        color: #fff;
+      }
+
+      .grmBtn:hover::before {
+        transform: translateX(10%);
+      }
+
+    /*PC modal↓ */
+
+    .modalClose {
+        width: 36px;
+        height: 36px;
+        margin: 20px 20px 0 0;
+    }
+
+    .modalClose::before {
+        width: 45px;
+        top: 13px;
+        right: -5px;
+        border-bottom: 10px solid #000;
+    }
+
+    .modalClose::after {
+        width: 45px;
+        top: 13px;
+        right: -5px;
+        border-bottom: 10px solid #000;
+    }
+
+    .modalClose:hover {
+        cursor: pointer;
+    }
+
+    .modalCont img {
+        width: 30%;
+        margin: 50px auto 0;
+        box-shadow: 10px 10px 6px #d9d9d9;
+    }
+
+    /* modal↑ */
+
+    /* PC section3 */
+
+.hrSec{
+    padding: 60px 0 80px;
+}
+
+.hrSec h2{
+    margin: 0 -25px 40px;
+}
+
+.hrSec .grmSubtitle,
+.hrSec .hrSubtitle{
+    font-size: 20px;
+    padding: 40px 0;
+    width: 40%;
+    margin: 0 auto 80px 20px;
+}
+
+.h3Hr{
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.hrFlex1{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.hrFlex2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.hrFlex1 img{
+    margin-right: 40px;
+}
+
+.hrFlex2 img{
+    margin-left: 40px;
+}
+
+.hrImg{
+    height: 360px;
+    object-fit: cover;
+    width: 55%;
+}
+
+.hrDesr{
+    width: 40%;
+    font-size: 20px;
+    align-self: center;
+}
+}
